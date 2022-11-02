@@ -7,6 +7,12 @@ pipeline{
 options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
 }
+
+options {
+  timestamps
+  warnError('where is error occur')
+}
+
     stages{
         //get the code from github repo
         stage('checkout code'){

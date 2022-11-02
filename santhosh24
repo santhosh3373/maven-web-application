@@ -8,6 +8,13 @@ options {
   buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
 }
 
+triggers {
+  pollSCM '* * * * *'
+  cron '* * * * *'
+}
+
+
+
 
     stages{
         //get the code from github repo
